@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pokt/auth.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/models/Product.dart';
 import 'package:pokt/screens/details/components/body.dart';
 
-class DetailsScreen extends StatelessWidget {
+class DetailsScreen extends AuthGatedStatelessWidget {
   final Product product;
 
-  const DetailsScreen({Key key, this.product}) : super(key: key);
+  DetailsScreen({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

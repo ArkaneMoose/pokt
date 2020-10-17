@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/models/Store.dart';
 import 'package:pokt/screens/home/components/item_card.dart';
