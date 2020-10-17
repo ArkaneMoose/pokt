@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokt/constants.dart';
-import 'package:pokt/screens/home/home_screen.dart';
+import 'package:pokt/screens/home/home-screen.dart';
+import 'package:pokt/screens/storefront/storefront_screen.dart';
 
 void main() => runApp(MyApp());
 
