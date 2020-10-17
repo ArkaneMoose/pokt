@@ -10,7 +10,7 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 35),
+      padding: EdgeInsets.only(left: 35, right: 35, bottom: 5),
       height: 75,
       width: double.infinity,
       // double.infinity means it cove the available width

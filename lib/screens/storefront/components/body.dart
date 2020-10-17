@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/models/Product.dart';
@@ -30,7 +31,7 @@ class Body extends StatelessWidget {
                   product: products[index],
                   press: () => Navigator.push(
                       context,
-                      MaterialPageRoute(
+                      CupertinoPageRoute(
                         builder: (context) => DetailsScreen(
                           product: products[index],
                         ),
