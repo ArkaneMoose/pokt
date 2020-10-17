@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:pokt/constants.dart';
 // import 'package:pokt/screens/details/details-screen.dart';
 import 'package:pokt/models/Store.dart';
@@ -33,7 +34,7 @@ class ItemList extends StatelessWidget {
                             press: () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(
+                                CupertinoPageRoute(
                                   builder: (context) {
                                     return StorefrontScreen();
                                   },

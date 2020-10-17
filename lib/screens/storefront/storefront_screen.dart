@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pokt/auth.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/screens/storefront/components/body.dart';
 
-class StorefrontScreen extends StatelessWidget {
+class StorefrontScreen extends AuthGatedStatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
