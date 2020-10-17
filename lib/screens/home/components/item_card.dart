@@ -3,12 +3,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pokt/constants.dart';
 
 class ItemCard extends StatelessWidget {
-  final String title, shopName, svgSrc;
+  final String name, address, svgSrc;
   final Function press;
   const ItemCard({
     Key key,
-    this.title,
-    this.shopName,
+    this.name,
+    this.address,
     this.svgSrc,
     this.press,
   }) : super(key: key);
@@ -42,7 +42,7 @@ class ItemCard extends StatelessWidget {
                   margin: EdgeInsets.only(bottom: 15),
                   padding: EdgeInsets.all(25),
                   decoration: BoxDecoration(
-                    color: kPrimaryColor.withOpacity(0.13),
+                    color: kPrimaryColorFood.withOpacity(0.13),
                     shape: BoxShape.circle,
                   ),
                   child: SvgPicture.asset(
@@ -51,10 +51,10 @@ class ItemCard extends StatelessWidget {
                     // size.width * 0.18 means it use 18% of total width
                   ),
                 ),
-                Text(title),
+                Text(name),
                 SizedBox(height: 10),
                 Text(
-                  shopName,
+                  address,
                   style: TextStyle(fontSize: 12),
                 ),
               ],

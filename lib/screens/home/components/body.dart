@@ -3,6 +3,7 @@ import 'package:pokt/components/search_box.dart';
 import 'package:pokt/screens/home/components/category_list.dart';
 import 'package:pokt/screens/home/components/discount_card.dart';
 import 'package:pokt/screens/home/components/item_list.dart';
+import 'package:pokt/models/Store.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -14,9 +15,10 @@ class Body extends StatelessWidget {
           SearchBox(
             onChanged: (value) {},
           ),
-          CategoryList(),
-          ItemList(),
+          ItemList(category: "Fast Food", stores: stores_list),
           DiscountCard(),
+          ItemList(category: "Fine Dining", stores: stores_list),
+          ItemList(category: "Fresh Orangutan", stores: stores_list),
         ],
       ),
     );
