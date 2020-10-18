@@ -6,7 +6,8 @@ import 'package:pokt/constants.dart';
 
 AppBar foodAppBar(BuildContext context) {
   return AppBar(
-    backgroundColor: Colors.white,
+    brightness: Brightness.light,
+    backgroundColor: kPrimaryColorFood.withOpacity(0.08),
     elevation: 0,
     title: RichText(
       text: TextSpan(
@@ -17,7 +18,7 @@ AppBar foodAppBar(BuildContext context) {
         children: [
           TextSpan(
             text: "Pokt",
-            style: TextStyle(color: kKindaBlack),
+            style: TextStyle(color: kDarkPrimaryColor),
           ),
           TextSpan(
             text: "Food",
@@ -28,7 +29,7 @@ AppBar foodAppBar(BuildContext context) {
     ),
     actions: <Widget>[
       IconButton(
-        icon: Icon(Ionicons.cart_outline, color: kKindaBlack),
+        icon: Icon(Ionicons.cart_outline, color: kDarkPrimaryColor),
         onPressed: () {
           Navigator.push(
             context,

@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pokt/constants.dart';
-import 'package:pokt/models/Store.dart';
-import 'package:pokt/screens/home/components/item_card.dart';
-import 'package:pokt/screens/storefront/storefront_screen.dart';
+import 'package:pokt/models/Product.dart';
+import 'package:pokt/screens/details/details_screen.dart';
+import 'package:pokt/screens/storefront/components/item_card.dart';
 
 class ItemList extends StatelessWidget {
   final String category;
-  final List<Store> stores;
-  const ItemList({Key key, this.category, this.stores}) : super(key: key);
+  final List<Product> items;
+  const ItemList({Key key, this.category, this.items}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,21 +25,16 @@ class ItemList extends StatelessWidget {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                  children: stores
+                  children: items
                       .map((s) => ItemCard(
-                            svgSrc: "assets/icons/burger_beer.svg",
-                            name: s.name,
-                            address: s.address,
-                            press: () {
-                              Navigator.push(
+                            product: s,
+                            press: () => Navigator.push(
                                 context,
                                 CupertinoPageRoute(
-                                  builder: (context) {
-                                    return StorefrontScreen();
-                                  },
-                                ),
-                              );
-                            },
+                                  builder: (context) => DetailsScreen(
+                                    product: s,
+                                  ),
+                                )),
                           ))
                       .toList(),
                 ),

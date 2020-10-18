@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ionicons/ionicons.dart';
 import 'package:pokt/constants.dart';
 
-AppBar groceryAppBar(BuildContext context) {
+AppBar profileAppBar(BuildContext context) {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0,
@@ -14,22 +13,15 @@ AppBar groceryAppBar(BuildContext context) {
             .copyWith(fontWeight: FontWeight.bold),
         children: [
           TextSpan(
-            text: "Pokt",
+            text: "Your ",
             style: TextStyle(color: kDarkPrimaryColor),
           ),
           TextSpan(
-            text: "Grocery",
-            style: TextStyle(color: kPrimaryColorGrocery),
+            text: "Pokt",
+            style: TextStyle(color: kPrimaryColorFood),
           ),
         ],
       ),
     ),
-    actions: <Widget>[
-      IconButton(
-        icon: Icon(Ionicons.cart_outline, color: kDarkPrimaryColor),
-        onPressed: () {},
-      ),
-      SizedBox(width: kDefaultPaddin / 2)
-    ],
   );
 }

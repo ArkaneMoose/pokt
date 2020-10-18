@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:ionicons/ionicons.dart';
 import 'package:pokt/constants.dart';
 
 AppBar retailAppBar(BuildContext context) {
   return AppBar(
     backgroundColor: Colors.white,
     elevation: 0,
-    leading: IconButton(
-      icon: SvgPicture.asset("assets/icons/menu.svg"),
-      onPressed: () {},
-    ),
     title: RichText(
       text: TextSpan(
         style: Theme.of(context)
@@ -19,10 +15,10 @@ AppBar retailAppBar(BuildContext context) {
         children: [
           TextSpan(
             text: "Pokt",
-            style: TextStyle(color: ksecondaryColor),
+            style: TextStyle(color: kDarkPrimaryColor),
           ),
           TextSpan(
-            text: "Grocery",
+            text: "Retail",
             style: TextStyle(color: kPrimaryColorRetail),
           ),
         ],
@@ -30,9 +26,10 @@ AppBar retailAppBar(BuildContext context) {
     ),
     actions: <Widget>[
       IconButton(
-        icon: SvgPicture.asset("assets/icons/dark_search.svg"),
+        icon: Icon(Ionicons.cart_outline, color: kDarkPrimaryColor),
         onPressed: () {},
       ),
+      SizedBox(width: kDefaultPaddin / 2)
     ],
   );
 }

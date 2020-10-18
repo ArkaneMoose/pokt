@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pokt/components/search_box.dart';
-import 'package:pokt/screens/home/components/category_list.dart';
 import 'package:pokt/screens/home/components/discount_card.dart';
 import 'package:pokt/screens/home/components/item_list.dart';
 import 'package:pokt/models/Store.dart';
