@@ -7,13 +7,14 @@ import 'package:pokt/components/fab_barcode_scan.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/screens/storefront/components/body.dart';
 
-class StorefrontScreen extends AuthGatedStatelessWidget {
+class StorefrontScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: buildAppBar(context),
-      body: Body(),
-      floatingActionButton: FabBarcodeScan(),
+    return AuthGate(
+      child: Scaffold(
+        appBar: buildAppBar(context),
+        body: Body(),
+      ),
     );
   }
 

@@ -6,22 +6,28 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pokt/screens/login/login_screen.dart';
 import 'package:pokt/transitions.dart';
 
-abstract class AuthGatedStatelessWidget extends StatefulWidget {
-  AuthGatedStatelessWidget({Key key}) : super(key: key);
-  Widget build(BuildContext context);
+class AuthGate extends StatefulWidget {
+  final Widget child;
+  AuthGate({Key key, @required this.child}) : super(key: key);
 
   @override
   _AuthGatedStatelessWidgetState createState() =>
-      _AuthGatedStatelessWidgetState(this);
+      _AuthGatedStatelessWidgetState(this.child);
 }
 
-class _AuthGatedStatelessWidgetState extends State<AuthGatedStatelessWidget> {
-  final AuthGatedStatelessWidget _widget;
+class _AuthGatedStatelessWidgetState extends State<AuthGate> {
+  Widget _widget;
   StreamSubscription<User> _subscription;
   bool _pushedLoginScreen;
   bool _loggedIn;
 
   _AuthGatedStatelessWidgetState(this._widget);
+
+  @override
+  void didUpdateWidget(covariant AuthGate oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _widget = widget.child;
+  }
 
   @override
   void initState() {
@@ -55,7 +61,7 @@ class _AuthGatedStatelessWidgetState extends State<AuthGatedStatelessWidget> {
     if (!_loggedIn) {
       return Scaffold(body: Center(child: CircularProgressIndicator()));
     }
-    return this._widget.build(context);
+    return this._widget;
   }
 }
 
