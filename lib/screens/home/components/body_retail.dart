@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokt/components/search_box.dart';
+import 'package:pokt/constants.dart';
 import 'package:pokt/screens/home/components/discount_card_retail.dart';
 import 'package:pokt/screens/home/components/item_list.dart';
 import 'package:pokt/models/Store.dart';
@@ -14,10 +15,19 @@ class BodyRetail extends StatelessWidget {
           SearchBox(
             onChanged: (value) {},
           ),
-          ItemList(category: "Fast Food", stores: stores_list),
           DiscountCardRetail(),
-          ItemList(category: "Fine Dining", stores: stores_list),
-          ItemList(category: "Fresh Orangutan", stores: stores_list),
+          ItemList(
+              category: "Technology",
+              stores: retail_tech,
+              imgColor: kPrimaryColorRetail),
+          ItemList(
+              category: "General",
+              stores: retail_general,
+              imgColor: kPrimaryColorRetail),
+          ItemList(
+              category: "Home",
+              stores: retail_home,
+              imgColor: kPrimaryColorRetail),
         ],
       ),
     );

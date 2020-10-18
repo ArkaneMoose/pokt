@@ -4,6 +4,7 @@ import 'package:pokt/constants.dart';
 
 class ItemCard extends StatelessWidget {
   final String name, address, svgSrc;
+  final Color imgColor;
   final Function press;
   const ItemCard({
     Key key,
@@ -11,6 +12,7 @@ class ItemCard extends StatelessWidget {
     this.address,
     this.svgSrc,
     this.press,
+    this.imgColor,
   }) : super(key: key);
 
   @override
@@ -42,7 +44,7 @@ class ItemCard extends StatelessWidget {
                   margin: EdgeInsets.only(bottom: 15),
                   padding: EdgeInsets.all(25),
                   decoration: BoxDecoration(
-                    color: kPrimaryColorFood.withOpacity(0.13),
+                    color: imgColor.withOpacity(0.13),
                     shape: BoxShape.circle,
                   ),
                   child: SvgPicture.asset(

@@ -3,7 +3,6 @@ import 'package:pokt/constants.dart';
 import 'package:pokt/models/Product.dart';
 
 import 'add_to_cart.dart';
-import 'color_and_size.dart';
 import 'counter_with_fav_btn.dart';
 import 'description.dart';
 import 'product_title_with_image.dart';
@@ -40,7 +39,6 @@ class Body extends StatelessWidget {
                   ),
                   child: Column(
                     children: <Widget>[
-                      ColorAndSize(product: product),
                       SizedBox(height: kDefaultPaddin / 2),
                       Description(product: product),
                       SizedBox(height: kDefaultPaddin / 2),

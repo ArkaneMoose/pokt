@@ -30,8 +30,8 @@ class DiscountCardRetail extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFFFF961F).withOpacity(0.7),
-                    kPrimaryColorFood.withOpacity(0.7),
+                    Color(0xFF1fc8ff).withOpacity(0.7),
+                    kPrimaryColorRetail.withOpacity(0.7),
                   ],
                 ),
               ),
@@ -40,7 +40,7 @@ class DiscountCardRetail extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Expanded(
-                      child: SvgPicture.asset("assets/icons/macdonalds.svg"),
+                      child: SvgPicture.asset("assets/icons/NCR.svg"),
                     ),
                     Expanded(
                       child: RichText(
@@ -48,18 +48,19 @@ class DiscountCardRetail extends StatelessWidget {
                           style: TextStyle(color: Colors.white),
                           children: [
                             TextSpan(
-                              text: "Special Offer!! \n",
+                              text: "HackGT Special!! \n",
                               style: TextStyle(fontSize: 16),
                             ),
                             TextSpan(
-                              text: "30% off\n",
+                              text: "FREE iPHONE 12 PRO MAX\n",
                               style: TextStyle(
-                                fontSize: 40,
+                                fontSize: 24,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             TextSpan(
-                              text: "at participating MacDonald's locations!",
+                              text:
+                                  "for the winners of the challenge \n* terms and conditions may apply. ",
                               style: TextStyle(fontSize: 10),
                             ),
                           ],

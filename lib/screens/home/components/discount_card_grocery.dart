@@ -30,8 +30,8 @@ class DiscountCardGrocery extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xFFFF961F).withOpacity(0.7),
-                    kPrimaryColorFood.withOpacity(0.7),
+                    Color(0xFF1fff56).withOpacity(0.7),
+                    kPrimaryColorGrocery.withOpacity(0.7),
                   ],
                 ),
               ),
@@ -40,7 +40,7 @@ class DiscountCardGrocery extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Expanded(
-                      child: SvgPicture.asset("assets/icons/macdonalds.svg"),
+                      child: SvgPicture.asset("assets/icons/publix.svg"),
                     ),
                     Expanded(
                       child: RichText(
@@ -48,18 +48,19 @@ class DiscountCardGrocery extends StatelessWidget {
                           style: TextStyle(color: Colors.white),
                           children: [
                             TextSpan(
-                              text: "Special Offer!! \n",
+                              text: "Limited Time Only \n",
                               style: TextStyle(fontSize: 16),
                             ),
                             TextSpan(
-                              text: "30% off\n",
+                              text: "BOGO\n",
                               style: TextStyle(
                                 fontSize: 40,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             TextSpan(
-                              text: "at participating MacDonald's locations!",
+                              text:
+                                  "Buy one Pub Sub and get one free at participating Publix locations!",
                               style: TextStyle(fontSize: 10),
                             ),
                           ],
