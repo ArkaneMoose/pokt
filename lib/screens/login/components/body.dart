@@ -44,7 +44,12 @@ class Body extends StatelessWidget {
                   width: 20.0,
                   height: 20.0,
                 ),
-              )
+              ),
+        error != null
+            ? Text(error.toString(),
+                style: const TextStyle(color: Colors.red),
+                textAlign: TextAlign.center)
+            : Container(),
       ],
     ));
   }

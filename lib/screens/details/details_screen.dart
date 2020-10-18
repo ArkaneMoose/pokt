@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pokt/auth.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/models/Product.dart';
+import 'package:pokt/screens/cart/cart_screen.dart';
 import 'package:pokt/screens/details/components/body.dart';
 
 class DetailsScreen extends AuthGatedStatelessWidget {
@@ -37,7 +39,16 @@ class DetailsScreen extends AuthGatedStatelessWidget {
         ),
         IconButton(
           icon: SvgPicture.asset("assets/icons/cart.svg"),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              CupertinoPageRoute(
+                builder: (context) {
+                  return CartScreen();
+                },
+              ),
+            );
+          },
         ),
         SizedBox(width: kDefaultPaddin / 2)
       ],

@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pokt/auth.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/screens/storefront/components/body.dart';
+import 'package:pokt/screens/cart/cart_screen.dart';
 
 class StorefrontScreen extends AuthGatedStatelessWidget {
   @override
@@ -36,7 +38,16 @@ class StorefrontScreen extends AuthGatedStatelessWidget {
             // By default our  icon color is white
             color: kTextColor,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              CupertinoPageRoute(
+                builder: (context) {
+                  return CartScreen();
+                },
+              ),
+            );
+          },
         ),
         SizedBox(width: kDefaultPaddin / 2)
       ],
