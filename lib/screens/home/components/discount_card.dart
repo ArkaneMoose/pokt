@@ -24,10 +24,10 @@ class DiscountCard extends StatelessWidget {
             height: 166,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage("assets/images/bag_1.png"),
-              ),
+              // image: DecorationImage(
+              //   fit: BoxFit.fill,
+              //   image: AssetImage("assets/images/bag_1.png"),
+              // ),
             ),
             child: DecoratedBox(
               decoration: BoxDecoration(
@@ -40,7 +40,7 @@ class DiscountCard extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.only(left: 5, right: 20, bottom: 5),
                 child: Row(
                   children: <Widget>[
                     Expanded(
@@ -52,19 +52,18 @@ class DiscountCard extends StatelessWidget {
                           style: TextStyle(color: Colors.white),
                           children: [
                             TextSpan(
-                              text: "Get Discount of \n",
+                              text: "Special Offer!! \n",
                               style: TextStyle(fontSize: 16),
                             ),
                             TextSpan(
-                              text: "30% \n",
+                              text: "30% off\n",
                               style: TextStyle(
-                                fontSize: 43,
+                                fontSize: 40,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             TextSpan(
-                              text:
-                                  "at MacDonald's on your first order & Instant cashback",
+                              text: "at participating MacDonald's locations!",
                               style: TextStyle(fontSize: 10),
                             ),
                           ],

@@ -5,7 +5,8 @@ import 'package:pokt/constants.dart';
 
 AppBar foodAppBar(BuildContext context) {
   return AppBar(
-    backgroundColor: Colors.white,
+    brightness: Brightness.light,
+    backgroundColor: kPrimaryColorFood.withOpacity(0.08),
     elevation: 0,
     title: RichText(
       text: TextSpan(
