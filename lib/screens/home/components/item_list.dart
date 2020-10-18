@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/models/Store.dart';
 import 'package:pokt/screens/home/components/item_card.dart';
-import 'package:pokt/screens/profile/profile_screen.dart';
+import 'package:pokt/screens/storefront/storefront_screen.dart';
 
 class ItemList extends StatelessWidget {
   final String category;
@@ -35,7 +35,7 @@ class ItemList extends StatelessWidget {
                                 context,
                                 CupertinoPageRoute(
                                   builder: (context) {
-                                    return ProfileScreen();
+                                    return StorefrontScreen();
                                   },
                                 ),
                               );
