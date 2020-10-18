@@ -14,7 +14,7 @@ AppBar profileAppBar(BuildContext context) {
         children: [
           TextSpan(
             text: "Your ",
-            style: TextStyle(color: kPrimaryDark),
+            style: TextStyle(color: kDarkPrimaryColor),
           ),
           TextSpan(
             text: "Pokt",
