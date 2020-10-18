@@ -4,7 +4,6 @@ import 'package:ionicons/ionicons.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/screens/profile/components/profile_list_item.dart';
-import 'package:ionicons/ionicons.dart';
 
 class ProfileScreen extends StatelessWidget {
   @override

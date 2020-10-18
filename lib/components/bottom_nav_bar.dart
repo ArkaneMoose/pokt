@@ -28,7 +28,7 @@ class BottomNavBar extends StatelessWidget {
                 icon: Container(padding: EdgeInsets.all(4.0), child: tab.icon),
                 label: tab.label))
             .toList(),
-        super(key: key) {}
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {

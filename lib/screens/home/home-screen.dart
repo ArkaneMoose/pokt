@@ -8,7 +8,10 @@ import 'package:pokt/components/app_bar_retail.dart';
 import 'package:pokt/components/app_bar_profile.dart';
 import 'package:pokt/components/bottom_nav_bar.dart';
 import 'package:pokt/constants.dart';
-import 'package:pokt/screens/home/components/body.dart';
+import 'package:pokt/screens/home/components/body_food.dart';
+import 'package:pokt/screens/home/components/body_grocery.dart';
+import 'package:pokt/screens/home/components/body_retail.dart';
+import 'package:pokt/screens/profile/profile_screen.dart';
 
 final List<_Tab> tabs = [
   _Tab(
@@ -16,7 +19,7 @@ final List<_Tab> tabs = [
       icon: Icon(Ionicons.fast_food_outline),
       label: 'Food',
     ),
-    child: Body(),
+    child: BodyFood(),
     primaryColor: kPrimaryColorFood,
     appBar: foodAppBar,
   ),
@@ -25,7 +28,7 @@ final List<_Tab> tabs = [
       icon: Icon(Ionicons.basket_outline),
       label: 'Grocery',
     ),
-    child: Body(),
+    child: BodyGrocery(),
     primaryColor: kPrimaryColorGrocery,
     appBar: groceryAppBar,
   ),
@@ -34,7 +37,7 @@ final List<_Tab> tabs = [
       icon: Icon(Ionicons.pricetag_outline),
       label: 'Retail',
     ),
-    child: Body(),
+    child: BodyRetail(),
     primaryColor: kPrimaryColorRetail,
     appBar: retailAppBar,
   ),
@@ -43,7 +46,7 @@ final List<_Tab> tabs = [
       icon: Icon(Ionicons.person_outline),
       label: 'Profile',
     ),
-    child: Body(),
+    child: ProfileScreen(),
     primaryColor: kPrimaryColorFood,
     appBar: profileAppBar,
   ),

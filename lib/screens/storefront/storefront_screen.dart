@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:pokt/auth.dart';
-import 'package:pokt/components/fab_barcode_scan.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/screens/storefront/components/body.dart';
 

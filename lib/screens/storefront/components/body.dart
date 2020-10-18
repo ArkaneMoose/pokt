@@ -3,9 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/models/Product.dart';
 import 'package:pokt/screens/details/details_screen.dart';
-import 'package:pokt/screens/storefront/components/discount_card.dart';
-
-import 'categories.dart';
 import 'item_card.dart';
 
 class Body extends StatelessWidget {

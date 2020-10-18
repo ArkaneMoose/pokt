@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pokt/constants.dart';
 
-class DiscountCard extends StatelessWidget {
-  const DiscountCard({
+class DiscountCardFood extends StatelessWidget {
+  const DiscountCardFood({
     Key key,
   }) : super(key: key);
 
@@ -24,10 +24,6 @@ class DiscountCard extends StatelessWidget {
             height: 166,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              // image: DecorationImage(
-              //   fit: BoxFit.fill,
-              //   image: AssetImage("assets/images/bag_1.png"),
-              // ),
             ),
             child: DecoratedBox(
               decoration: BoxDecoration(
