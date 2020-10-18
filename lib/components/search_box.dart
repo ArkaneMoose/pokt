@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pokt/constants.dart';
@@ -18,7 +17,7 @@ class SearchBox extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
         border: Border.all(
-          color: ksecondaryColor.withOpacity(0.75),
+          color: kDarkSecondaryColor.withOpacity(0.75),
         ),
       ),
       child: TextField(
@@ -27,7 +26,7 @@ class SearchBox extends StatelessWidget {
           border: InputBorder.none,
           icon: SvgPicture.asset("assets/icons/dark_search.svg"),
           hintText: "Search Eateries",
-          hintStyle: TextStyle(color: ksecondaryColor),
+          hintStyle: TextStyle(color: kDarkSecondaryColor),
         ),
       ),
     );

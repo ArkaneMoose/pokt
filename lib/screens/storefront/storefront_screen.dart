@@ -30,11 +30,11 @@ class StorefrontScreen extends AuthGatedStatelessWidget {
       ),
       actions: <Widget>[
         IconButton(
-          icon: Icon(Ionicons.search_outline, color: kKindaBlack),
+          icon: Icon(Ionicons.search_outline, color: kDarkPrimaryColor),
           onPressed: () {},
         ),
         IconButton(
-          icon: Icon(Ionicons.cart_outline, color: kKindaBlack),
+          icon: Icon(Ionicons.cart_outline, color: kDarkPrimaryColor),
           onPressed: () {},
         ),
         SizedBox(width: kDefaultPaddin / 2)

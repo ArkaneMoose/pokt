@@ -19,7 +19,7 @@ AppBar retailAppBar(BuildContext context) {
         children: [
           TextSpan(
             text: "Pokt",
-            style: TextStyle(color: ksecondaryColor),
+            style: TextStyle(color: kDarkSecondaryColor),
           ),
           TextSpan(
             text: "Grocery",
