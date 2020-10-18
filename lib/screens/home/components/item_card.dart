@@ -53,6 +53,7 @@ class ItemCard extends StatelessWidget {
                   //   child: Image.network(imgSrc),
                   // ),
                   child: CircleAvatar(
+                    backgroundColor: imgColor.withOpacity(0.13),
                     radius: 50,
                     backgroundImage: NetworkImage(imgSrc),
                   ),

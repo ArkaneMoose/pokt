@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pokt/constants.dart';
+import 'package:pokt/models/Store.dart';
 
-class DiscountCard extends StatelessWidget {
-  const DiscountCard({
-    Key key,
-  }) : super(key: key);
+class StoreCard extends StatelessWidget {
+  final Store store;
+  const StoreCard({this.store, Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,10 +14,6 @@ class DiscountCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Text(
-            "Offers & Discounts",
-            style: TextStyle(fontWeight: FontWeight.bold, color: kTextColor),
-          ),
           Container(
             margin: EdgeInsets.symmetric(vertical: 20),
             width: double.infinity,
@@ -26,7 +22,7 @@ class DiscountCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               image: DecorationImage(
                 fit: BoxFit.fill,
-                image: AssetImage("assets/images/bag_1.png"),
+                image: NetworkImage(store.imageUrl),
               ),
             ),
             child: DecoratedBox(
@@ -44,28 +40,20 @@ class DiscountCard extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Expanded(
-                      child: SvgPicture.asset("assets/icons/macdonalds.svg"),
-                    ),
-                    Expanded(
                       child: RichText(
                         text: TextSpan(
                           style: TextStyle(color: Colors.white),
                           children: [
                             TextSpan(
-                              text: "Get Discount of \n",
-                              style: TextStyle(fontSize: 16),
-                            ),
-                            TextSpan(
-                              text: "30% \n",
+                              text: store.name,
                               style: TextStyle(
-                                fontSize: 43,
+                                fontSize: 35,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             TextSpan(
-                              text:
-                                  "at MacDonald's on your first order & Instant cashback",
-                              style: TextStyle(fontSize: 10),
+                              text: "\n" + store.address,
+                              style: TextStyle(fontSize: 12),
                             ),
                           ],
                         ),

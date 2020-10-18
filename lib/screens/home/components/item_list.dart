@@ -39,7 +39,7 @@ class ItemList extends StatelessWidget {
                                 context,
                                 CupertinoPageRoute(
                                   builder: (context) {
-                                    return StorefrontScreen();
+                                    return StorefrontScreen(s);
                                   },
                                 ),
                               );

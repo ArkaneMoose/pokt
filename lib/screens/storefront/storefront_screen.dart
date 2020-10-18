@@ -4,15 +4,19 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:pokt/auth.dart';
 import 'package:pokt/constants.dart';
+import 'package:pokt/models/Store.dart';
 import 'package:pokt/screens/storefront/components/body.dart';
 
 class StorefrontScreen extends StatelessWidget {
+  final Store store;
+  StorefrontScreen(this.store);
+
   @override
   Widget build(BuildContext context) {
     return AuthGate(
       child: Scaffold(
         appBar: buildAppBar(context),
-        body: Body(),
+        body: Body(store),
       ),
     );
   }
