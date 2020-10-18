@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'default_button.dart';
+import '../../default_button.dart';
 
 import '../../../constants.dart';
 
