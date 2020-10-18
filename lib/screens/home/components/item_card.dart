@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pokt/constants.dart';
 
 class ItemCard extends StatelessWidget {
-  final String name, address, svgSrc;
+  final String name, address, svgSrc, imgSrc;
   final Color imgColor;
   final Function press;
   const ItemCard({
@@ -11,6 +10,7 @@ class ItemCard extends StatelessWidget {
     this.name,
     this.address,
     this.svgSrc,
+    this.imgSrc,
     this.press,
     this.imgColor,
   }) : super(key: key);
@@ -47,10 +47,14 @@ class ItemCard extends StatelessWidget {
                     color: imgColor.withOpacity(0.13),
                     shape: BoxShape.circle,
                   ),
-                  child: SvgPicture.asset(
-                    svgSrc,
-                    width: size.width * 0.18,
-                    // size.width * 0.18 means it use 18% of total width
+                  // child: Container(
+                  //   height: 100,
+                  //   width: 100,
+                  //   child: Image.network(imgSrc),
+                  // ),
+                  child: CircleAvatar(
+                    radius: 50,
+                    backgroundImage: NetworkImage(imgSrc),
                   ),
                 ),
                 Text(name),

@@ -91,21 +91,21 @@ List<Store> grocery_mp = [
       name: "Publix",
       address: "595 Piedmont Ave NE, Atlanta, GA 30308",
       imageUrl:
-          "https://therelatives.org/wp-content/uploads/2019/08/publix-LOGO.png",
+          "https://cutpcdnwimages.azureedge.net/images/static/StoreFront/001544-828x498.png",
       description: dummyText,
       color: Color(0xFF3D82AE)),
   Store(
       name: "Kroger",
       address: "725 Ponce De Leon Ave NE, Atlanta, GA 30306",
       imageUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Kroger_logo_%281961-2019%29.svg/1200px-Kroger_logo_%281961-2019%29.svg.png",
+          "https://i1.wp.com/www.eatthis.com/wp-content/uploads/2020/05/kroger.jpg?fit=1200%2C879&ssl=1",
       description: dummyText,
       color: Color(0xFFD3A984)),
   Store(
       name: "Walgreens",
       address: "595 Piedmont Ave NE Ste 100, Atlanta, GA 30308",
       imageUrl:
-          "https://4.bp.blogspot.com/-7j8Us1PvQ_c/VCLc5kkqNyI/AAAAAAAAE1A/HIXcx-z8ZaI/w1200-h630-p-k-no-nu/Logo%2BWalgreens.png",
+          "https://images.markets.businessinsider.com/image/5f070e541918241b5b131d5a",
       description: dummyText,
       color: Color(0xFF989493)),
 ];
@@ -115,21 +115,21 @@ List<Store> grocery_wholesale = [
       name: "Costco",
       address: "500 Brookhaven Ave, Atlanta, GA 30319",
       imageUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Costco_Wholesale_logo_2010-10-26.svg/800px-Costco_Wholesale_logo_2010-10-26.svg.png",
+          "https://www.costco.com/wcsstore/CostcoUSBCCatalogAssetStore/feature-pages/18w1411-costco-warehouse.jpg",
       description: dummyText,
       color: Color(0xFF3D82AE)),
   Store(
       name: "Sam's Club",
       address: "2901 Clairmont Rd, Atlanta, GA 30329",
       imageUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Sams_Club.svg/1024px-Sams_Club.svg.png",
+          "https://www.homeworldbusiness.com/wp-content/uploads/2017/11/sams-club-new.jpg",
       description: dummyText,
       color: Color(0xFFD3A984)),
   Store(
       name: "Whole Foods",
       address: "650 Ponce De Leon Ave NE, Atlanta, GA 30308",
       imageUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Whole_Foods_Market_201x_logo.svg/1200px-Whole_Foods_Market_201x_logo.svg.png",
+          "https://imgs.6sqft.com/wp-content/uploads/2016/05/03102723/Whole-Foods-Market.jpg",
       description: dummyText,
       color: Color(0xFF989493)),
 ];
@@ -139,7 +139,7 @@ List<Store> grocery_int = [
       name: "Patel Brothers",
       address: "1709 Church St F, Decatur, GA 30033",
       imageUrl:
-          "https://upload.wikimedia.org/wikipedia/en/thumb/b/bb/Patel_Brothers.svg/1280px-Patel_Brothers.svg.png",
+          "https://3.bp.blogspot.com/-ET0WKep71VE/WdVMkrzwMKI/AAAAAAAAMkc/MgyRLfDB-J4bUnQADrm4hgMMLIb35WTRACLcBGAs/s1600/Patel-Brothers-Patel-Plaza.jpg",
       description: dummyText,
       color: Color(0xFF3D82AE)),
   Store(
@@ -163,22 +163,21 @@ List<Store> retail_tech = [
   Store(
       name: "Apple",
       address: "3393 Peachtree Rd NE, Atlanta, GA 30326",
-      imageUrl:
-          "https://seeklogo.com/images/A/apple-logo-52C416BDDD-seeklogo.com.png",
+      imageUrl: "https://www.apple.com/retail/eton/images/hero_large_2x.jpg",
       description: dummyText,
       color: Color(0xFF3D82AE)),
   Store(
       name: "Best Buy",
       address: "2537 Piedmont Rd NE, Atlanta, GA 30324",
       imageUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Best_Buy_Logo.svg/807px-Best_Buy_Logo.svg.png",
+          "https://i1.wp.com/digiday.com/wp-content/uploads/2017/07/Best-Buy.jpg?fit=1440%2C600&ssl=1",
       description: dummyText,
       color: Color(0xFFD3A984)),
   Store(
       name: "GameStop",
       address: "1801 Howell Mill Rd NW #550, Atlanta, GA 30318",
       imageUrl:
-          "https://mlpnk72yciwc.i.optimole.com/cqhiHLc.WqA8~2eefa/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/03/gamestop-logo.jpg",
+          "https://media.wired.com/photos/5e73e37dd036ef00088bfb87/125:94/w_2375,h_1786,c_limit/Gear-Gamestop-693469182.jpg",
       description: dummyText,
       color: Color(0xFF989493)),
 ];
@@ -188,20 +187,21 @@ List<Store> retail_general = [
       name: "Walmart",
       address: "835 M.L.K. Jr Dr NW, Atlanta, GA 30314",
       imageUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/1200px-Walmart_logo.svg.png",
+          "https://www.supermarketnews.com/sites/supermarketnews.com/files/styles/article_featured_retina/public/Walmart_Canada_supercenter_exterior.png",
       description: dummyText,
       color: Color(0xFF3D82AE)),
   Store(
       name: "Target",
       address: "375 18th St NW, Atlanta, GA 30363",
       imageUrl:
-          "https://www.national-law.com/wp-content/uploads/2014/05/target-logo-reverse-wide.png",
+          "https://cdn.cheapism.com/images/Top_Selling_Items_at_Target.max-800x600.png",
       description: dummyText,
       color: Color(0xFFD3A984)),
   Store(
       name: "Kohl's",
       address: "1825 East-West Connector, Austell, GA 30106",
-      imageUrl: "https://wjts.tv/wp-content/uploads/2020/03/unnamed.png",
+      imageUrl:
+          "https://www.gannett-cdn.com/presto/2020/03/31/PMJS/80143b10-9f74-4d6d-9f5f-649c99df615a-MJS_coronavirus_KOHLS_04_wood_corona_SUPPLIES.jpg",
       description: dummyText,
       color: Color(0xFF989493)),
 ];
@@ -210,22 +210,21 @@ List<Store> retail_home = [
   Store(
       name: "IKEA",
       address: "441 16th St NW, Atlanta, GA 30363",
-      imageUrl:
-          "https://cdn.mos.cms.futurecdn.net/H95bg4rrACvGwq5V2rtVUk-1200-80.jpg",
+      imageUrl: "https://images.wsj.net/im-193674?width=1280&size=1",
       description: dummyText,
       color: Color(0xFF3D82AE)),
   Store(
       name: "Home Depot",
       address: "650 Ponce De Leon Ave NE, Atlanta, GA 30308",
       imageUrl:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/TheHomeDepot.svg/1200px-TheHomeDepot.svg.png",
+          "https://www.thebalancesmb.com/thmb/QwfOKUuRIiZKpd3H0KYqk3X0LvA=/3000x1687/smart/filters:no_upscale()/home-depot-2016308-5b848f5b46e0fb00258d090d.jpg",
       description: dummyText,
       color: Color(0xFFD3A984)),
   Store(
       name: "Lowe's",
       address: "1280 Caroline St NE, Atlanta, GA 30307",
       imageUrl:
-          "https://www.lowes.com/images/logos/2016_lowes_logo/lowes_logo_pms_280/Lowes_logo_pms_280.jpg",
+          "https://www.pymnts.com/wp-content/uploads/2020/05/lowes-earnings-retail-home-improvement.jpg",
       description: dummyText,
       color: Color(0xFF989493)),
 ];

@@ -31,6 +31,7 @@ class ItemList extends StatelessWidget {
                       .map((s) => ItemCard(
                             imgColor: imgColor,
                             svgSrc: "assets/icons/burger_beer.svg",
+                            imgSrc: s.imageUrl,
                             name: s.name,
                             address: s.address,
                             press: () {
