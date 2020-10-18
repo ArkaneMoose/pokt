@@ -4,12 +4,14 @@ import 'package:pokt/auth.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/screens/storefront/components/body.dart';
 
-class StorefrontScreen extends AuthGatedStatelessWidget {
+class StorefrontScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: buildAppBar(context),
-      body: Body(),
+    return AuthGate(
+      child: Scaffold(
+        appBar: buildAppBar(context),
+        body: Body(),
+      ),
     );
   }
 

@@ -5,17 +5,19 @@ import 'package:pokt/constants.dart';
 import 'package:pokt/models/Product.dart';
 import 'package:pokt/screens/details/components/body.dart';
 
-class DetailsScreen extends AuthGatedStatelessWidget {
+class DetailsScreen extends StatelessWidget {
   final Product product;
 
   DetailsScreen({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // each product have a color
-      backgroundColor: product.color,
-      appBar: buildAppBar(context),
-      body: Body(product: product),
+    return AuthGate(
+      child: Scaffold(
+        // each product have a color
+        backgroundColor: product.color,
+        appBar: buildAppBar(context),
+        body: Body(product: product),
+      ),
     );
   }
 
