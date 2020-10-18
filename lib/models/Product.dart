@@ -18,12 +18,12 @@ class Product {
 List<Product> products = [
   Product(
       id: 1,
-      title: "Office Code",
-      price: 234,
+      title: "Sweet Baby Ray's BBQ Sauce",
+      price: 249,
       size: 12,
       description: dummyText,
-      image: "assets/images/bag_1.png",
-      color: Color(0xFF3D82AE)),
+      image: "assets/images/bbq-sauce.png",
+      color: Color(0xFF302625)),
   Product(
       id: 2,
       title: "Belt Bag",
