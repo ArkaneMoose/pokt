@@ -8,11 +8,13 @@ class ProfileListItem extends StatelessWidget {
   final IconData icon;
   final String text;
   final bool hasNavigation;
+  final Function onTap;
 
   const ProfileListItem({
     Key key,
     this.icon,
     this.text,
+    this.onTap,
     this.hasNavigation = true,
   }) : super(key: key);
 
@@ -32,22 +34,29 @@ class ProfileListItem extends StatelessWidget {
         borderRadius: BorderRadius.circular(kSpacingUnit.w * 3),
         color: kPrimaryColorFood.withOpacity(0.75),
       ),
-      child: Row(
-        children: <Widget>[
-          Icon(
-            this.icon,
-          ),
-          SizedBox(width: kSpacingUnit.w * 1.5),
-          Text(
-            this.text,
-            style: kButtonTextStyle,
-          ),
-          Spacer(),
-          if (this.hasNavigation)
+      child: InkWell(
+        onTap: () {
+          if (onTap != null) {
+            onTap();
+          }
+        },
+        child: Row(
+          children: <Widget>[
             Icon(
-              Ionicons.chevron_forward_outline,
+              this.icon,
             ),
-        ],
+            SizedBox(width: kSpacingUnit.w * 1.5),
+            Text(
+              this.text,
+              style: kButtonTextStyle,
+            ),
+            Spacer(),
+            if (this.hasNavigation)
+              Icon(
+                Ionicons.chevron_forward_outline,
+              ),
+          ],
+        ),
       ),
     );
   }

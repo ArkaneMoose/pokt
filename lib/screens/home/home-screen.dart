@@ -9,6 +9,7 @@ import 'package:pokt/components/app_bar_profile.dart';
 import 'package:pokt/components/bottom_nav_bar.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/screens/home/components/body.dart';
+import 'package:pokt/screens/profile/profile_screen.dart';
 
 final List<_Tab> tabs = [
   _Tab(
@@ -43,7 +44,7 @@ final List<_Tab> tabs = [
       icon: Icon(Ionicons.person_outline),
       label: 'Profile',
     ),
-    child: Body(),
+    child: ProfileScreen(),
     primaryColor: kPrimaryColorFood,
     appBar: profileAppBar,
   ),
