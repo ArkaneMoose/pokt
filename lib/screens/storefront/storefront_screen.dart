@@ -6,6 +6,7 @@ import 'package:pokt/auth.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/models/Store.dart';
 import 'package:pokt/screens/storefront/components/body.dart';
+import 'package:pokt/screens/cart/cart_screen.dart';
 
 class StorefrontScreen extends StatelessWidget {
   final Store store;
@@ -39,7 +40,16 @@ class StorefrontScreen extends StatelessWidget {
         ),
         IconButton(
           icon: Icon(Ionicons.cart_outline, color: kDarkPrimaryColor),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              CupertinoPageRoute(
+                builder: (context) {
+                  return CartScreen();
+                },
+              ),
+            );
+          },
         ),
         SizedBox(width: kDefaultPaddin / 2)
       ],
