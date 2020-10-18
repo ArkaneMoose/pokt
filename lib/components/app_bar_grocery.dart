@@ -4,7 +4,8 @@ import 'package:pokt/constants.dart';
 
 AppBar groceryAppBar(BuildContext context) {
   return AppBar(
-    backgroundColor: Colors.white,
+    brightness: Brightness.light,
+    backgroundColor: kPrimaryColorGrocery.withOpacity(0.08),
     elevation: 0,
     title: RichText(
       text: TextSpan(
