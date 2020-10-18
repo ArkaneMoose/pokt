@@ -1,27 +1,65 @@
+import 'dart:async';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:line_awesome_flutter/line_awesome_flutter.dart';
+import 'package:pokt/auth.dart';
 import 'package:pokt/constants.dart';
 import 'package:pokt/screens/profile/components/profile_list_item.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => ProfileScreenState();
+}
+
+class ProfileScreenState extends State<ProfileScreen> {
+  String _name;
+  String _email;
+  String _profilePic;
+  StreamSubscription _subscription;
+
+  @override
+  void initState() {
+    super.initState();
+    setStateFromFirebase();
+    _subscription = FirebaseAuth.instance.authStateChanges().listen((user) {
+      setState(() {
+        setStateFromFirebase();
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _subscription.cancel();
+    super.dispose();
+  }
+
+  void setStateFromFirebase() {
+    _name = FirebaseAuth.instance.currentUser.displayName;
+    _email = FirebaseAuth.instance.currentUser.email;
+    _profilePic = FirebaseAuth.instance.currentUser.photoURL;
+  }
+
   @override
   Widget build(BuildContext context) {
     ScreenUtil.init(context, height: 896, width: 414, allowFontScaling: true);
 
     var profileInfo = Column(
       children: <Widget>[
+        SizedBox(height: kSpacingUnit.w * 3),
         Container(
           height: kSpacingUnit.w * 10,
           width: kSpacingUnit.w * 10,
-          margin: EdgeInsets.only(top: kSpacingUnit.w * 2),
           child: Stack(
             children: <Widget>[
               CircleAvatar(
                 backgroundColor: kPrimaryColorFood.withOpacity(0.5),
                 radius: kSpacingUnit.w * 5,
-                // backgroundImage: AssetImage('assets/images/avatar.png'),
+                backgroundImage:
+                    _profilePic != null ? NetworkImage(_profilePic) : null,
               ),
               Align(
                 alignment: Alignment.bottomRight,
@@ -48,22 +86,22 @@ class ProfileScreen extends StatelessWidget {
         ),
         SizedBox(height: kSpacingUnit.w * 2),
         Text(
-          'Anthony Doljac',
+          _name,
           style: kTitleTextStyle,
         ),
         SizedBox(height: kSpacingUnit.w * 0.5),
         Text(
-          'adoljac@gmail.com',
+          _email,
           style: kCaptionTextStyle,
         ),
-        SizedBox(height: kSpacingUnit.w * 2),
+        SizedBox(height: kSpacingUnit.w * 3),
       ],
     );
 
     return Scaffold(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SizedBox(height: kSpacingUnit.w * 5),
           profileInfo,
           Expanded(
             child: ListView(
@@ -92,6 +130,7 @@ class ProfileScreen extends StatelessWidget {
                   icon: Ionicons.log_out_outline,
                   text: 'Logout',
                   hasNavigation: false,
+                  onTap: signOut,
                 ),
               ],
             ),
